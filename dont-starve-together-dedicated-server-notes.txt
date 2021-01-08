@@ -1,13 +1,34 @@
-guide: https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/#comments
+resources:
+	#dst guide to installing dedicated servers
+	https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/
 
-sudo wget -O run_dedicated_servers.sh https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh
+launching ec2 instance specs
+	-use ubuntu
+	-add custom TCP rule
+		server_port = 11001
+		master_server_port = 27019
+		authentication_port = 8769
 
+		server_port = 11000
+		master_server_port = 27018
+		authentication_port = 8768
+		master_port = 10889
 
-need to open ports:
-	server_port = 11001
-	master_server_port = 27019
-	authentication_port = 8769
+manual steps on ubuntu
 
-	server_port = 11000
-	master_server_port = 27018
-	authentication_port = 8768
+	sudo dpkg --add-architecture i386 && sudo apt -y update && sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y install libstdc++6:i386 libgcc1:i386 libcurl4-gnutls-dev:i386 && sudo apt-get -y install unzip
+
+	mkdir -p ~/steamcmd/
+	cd ~/steamcmd/
+	wget "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz"\
+	tar -xvzf steamcmd_linux.tar.gz
+
+	wget https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/MyDediServer.zip
+	mkdir -p ~/.klei/DoNotStarveTogether/
+	unzip MyDediServer.zip -d ~/.klei/DoNotStarveTogether/
+	
+	wget https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh -P ~/
+	
+	chmod u+x ~/run_dedicated_servers.sh
+	
+	~/run_dedicated_servers.sh
