@@ -32,3 +32,13 @@ manual steps on ubuntu
 	chmod u+x ~/run_dedicated_servers.sh
 	
 	~/run_dedicated_servers.sh
+
+MODS
+	workshop-351325790 (geometric placing) client mod
+	
+
+MISC:
+	C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods
+	"C:\Users\Nonoy\Documents\Klei\DoNotStarveTogether\94346078\Cluster_1\Master\modoverrides.lua"
+	
+	
