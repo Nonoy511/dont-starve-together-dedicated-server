@@ -35,8 +35,10 @@ manual steps on ubuntu
 
 	wget -O dedicated_server_mods_setup.lua https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/dedicated_server_mods_setup.lua -P ~/dontstarvetogether_dedicated_server/mods/
 
-	wget -O modoverrides.lua https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/dedicated_server_mods_setup.lua -P ~/dontstarvetogether_dedicated_server/mods/
-	
+	wget https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/modoverrides.lua -P ~/
+	cp ~/modoverrides.lua ~/.klei/DoNotStarveTogether/MyDediServer/Caves
+	cp ~/modoverrides.lua ~/.klei/DoNotStarveTogether/MyDediServer/Master
+
 	wget https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/mods-aka-workshops.zip -P ~/
 	unzip ~/mods-aka-workshops.zip -d ~/dontstarvetogether_dedicated_server/mods
 
