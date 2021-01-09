@@ -2,6 +2,9 @@ resources:
 	#dst guide to installing dedicated servers
 	https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/
 
+	#how to install/configure mods
+	https://steamcommunity.com/sharedfiles/filedetails/?id=591543858
+
 launching ec2 instance specs
 	-use ubuntu
 	-add custom TCP rule
