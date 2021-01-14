@@ -23,16 +23,19 @@ manual steps on ubuntu
 
 	mkdir -p ~/steamcmd/
 	cd ~/steamcmd/
-	wget "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz"\
+	wget "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz"
 	tar -xvzf steamcmd_linux.tar.gz
 
-	wget https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/MyDediServer.zip
+	cd ~
+	wget https://github.com/Nonoy511/dont-starve-together-dedicated-server/raw/master/MyDediServer-charmeleon.zip
 	mkdir -p ~/.klei/DoNotStarveTogether/
-	unzip MyDediServer.zip -d ~/.klei/DoNotStarveTogether/
+	unzip MyDediServer-charmeleon.zip -d ~/.klei/DoNotStarveTogether/
 	
 	wget https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh -P ~/
 	
 	chmod u+x ~/run_dedicated_servers.sh
+	
+	vi run_dedicated_servers.sh -> remove "validate" word
 	
 	~/run_dedicated_servers.sh
 
